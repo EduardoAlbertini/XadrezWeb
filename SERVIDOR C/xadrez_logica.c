@@ -284,25 +284,14 @@ bool vm_dama(int l, int c, int l_dest, int c_dest)
 		return false;
 }
 
-void rotaciona_tabuleiro()
-{
-	char temp[8][8], i, j;
-	
-	for (i = 0; i < 8; ++i)
-		for (j = 0; j < 8; ++j)
-			temp[7 - i][j] = tabuleiro[i][j];
-
-	for (i = 0; i < 8; ++i)
-		for (j = 0; j < 8; ++j)
-			tabuleiro[i][j] = temp[i][j];
-}
-
 // Verifica Movimentos
 bool vm(int l, int c, int l_dest, int c_dest)
 {
     // Pretas  => a : 1
     // Brancas => A : 2
     if(jogador_ativo == 'P' && faixa_jogador(tabuleiro[l][c]) == 2)
+        return false;
+    if(jogador_ativo == 'B' && faixa_jogador(tabuleiro[l][c]) == 1)
         return false;
 
     if (tabuleiro[l][c] == 'P' || tabuleiro[l][c] == 'p')
@@ -413,7 +402,6 @@ void inicia_tabuleiro()
 		
 }
 
-/**
 void o_jogo()
 {
     int l, c, l_dest, c_dest;
@@ -459,4 +447,3 @@ int main()
 
     return 0;
 }
-*/
