@@ -369,6 +369,11 @@ bool vm(int l, int c, int l_dest, int c_dest)
     return false;
 }
 
+bool verifica_xeque(int rei_linha, rei_coluna)
+{
+    
+}
+
 void inicia_tabuleiro()
 {
 	int i;
@@ -402,6 +407,7 @@ void inicia_tabuleiro()
 		
 }
 
+/**
 void o_jogo()
 {
     int l, c, l_dest, c_dest;
@@ -447,3 +453,4 @@ int main()
 
     return 0;
 }
+*/
