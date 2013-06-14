@@ -48,8 +48,8 @@ static int callback_dumb_increment(struct libwebsocket_context * this,
             	{
             		if(verifica_xeque(r[0],r[1]))
             			a ='C';
-                }else if(verifica_xeque(R[0],R[1]))
-            			a ='C';
+            		
+                }
                 n = sprintf((char *)p, "%s%s", a, str);
             }else
                 n = sprintf((char *)p, "%s%s", "F", str);

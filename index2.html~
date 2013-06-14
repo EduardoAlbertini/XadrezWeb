@@ -77,7 +77,7 @@
 			function recebe(msg)
 			{
 				
-				if(msg.data[0] == "V" || msg.data[0] == "C")
+				if(msg.data[0] == "V")
 				{
 					var obj = tabuleiroQuad[msg.data[3]][msg.data[4]];
 					tabuleiro[msg.data[1]][msg.data[2]].blendTo({LocX:obj.getLocX(),LocY:obj.getLocY()},1000);
@@ -93,9 +93,6 @@
 						ThreadViraTabu = window.setInterval(ViraTabuleiroE,5);
 
 					jog2 = !jog2;
-					
-					if(msg.data[0] == "C")
-						alert("Cheque!");
 				}
 				
 
